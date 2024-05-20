@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FitLab</string>
+    <string name="logout_image">imagen_logout</string>
+    <string name="profile_image">imagen_perfil</string>
+    <string name="expand_facil">imagen_facil</string>
+    <string name="expand_medio">imagen_medio</string>
+    <string name="expand_dificil">imagen_dificil</string>
 </resources>

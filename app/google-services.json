@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "29969571001",
+    "firebase_url": "https://finalmoviles-e0d72-default-rtdb.firebaseio.com",
+    "project_id": "finalmoviles-e0d72",
+    "storage_bucket": "finalmoviles-e0d72.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29969571001:android:0a8c18cbaa9bfa4166cf68",
+        "android_client_info": {
+          "package_name": "com.montoya.fitlab"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbiuFmgqZS7isftSposqcDvcKEepIAx1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
