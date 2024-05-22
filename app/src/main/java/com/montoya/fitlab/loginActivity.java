@@ -42,7 +42,9 @@ public class loginActivity extends AppCompatActivity {
                 String email = emailEditText.getText().toString().trim();
                 String password = passwordEditText.getText().toString().trim();
 
-                loginUser(email, password);
+                if (validateFields(email, password)) {
+                    loginUser(email, password);
+                }
             }
         });
 
@@ -54,6 +56,29 @@ public class loginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Verificar si el usuario ya está autenticado
+        if (mAuth.getCurrentUser() != null) {
+            // Si el usuario ya está autenticado, redirigir a MainActivity
+            startActivity(new Intent(loginActivity.this, MainActivity.class));
+            finish(); // Termina la actividad actual
+        }
+    }
+
+    private boolean validateFields(String email, String password) {
+        if (email.isEmpty()) {
+            emailEditText.setError("Correo electrónico requerido");
+            emailEditText.requestFocus();
+            return false;
+        }
+
+        if (password.isEmpty()) {
+            passwordEditText.setError("Contraseña requerida");
+            passwordEditText.requestFocus();
+            return false;
+        }
+
+        return true;
     }
 
     private void loginUser(String email, String password) {
@@ -72,7 +97,7 @@ public class loginActivity extends AppCompatActivity {
                             finish(); // Termina la actividad actual
                         } else {
                             // Si el inicio de sesión falla, muestra un mensaje al usuario.
-                            Toast.makeText(loginActivity.this, "Inicio de sesión fallido.",
+                            Toast.makeText(loginActivity.this, "Usuario o contraseña incorrecta.",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }

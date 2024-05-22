@@ -27,6 +27,21 @@
             android:name=".loginActivity"
             android:exported="true">
         </activity>
+
+        <activity
+            android:name=".registerActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".bodyActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>

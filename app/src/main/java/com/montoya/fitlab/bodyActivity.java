@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,7 +23,8 @@ import com.google.firebase.database.FirebaseDatabase;
 public class bodyActivity extends AppCompatActivity {
 
     private TextView welcomeTextView;
-    private EditText editTextEdad, editTextPeso, editTextEstatura;
+    private Spinner spinnerEdad;
+    private EditText editTextPeso, editTextEstatura;
     private Button buttonIniciar;
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
@@ -41,13 +43,17 @@ public class bodyActivity extends AppCompatActivity {
 
         // Referencias a los elementos de la UI
         welcomeTextView = findViewById(R.id.textView);
-        editTextEdad = findViewById(R.id.editTextEdad);
+        spinnerEdad = findViewById(R.id.spinnerEdad);
         editTextPeso = findViewById(R.id.editTextPeso);
         editTextEstatura = findViewById(R.id.editTextEstatura);
         buttonIniciar = findViewById(R.id.button);
 
         // Mostrar el nombre del usuario en el TextView
-        welcomeTextView.setText("Bienvenido, " + username + ". Conozcamos un poco más de ti");
+        if (username != null && !username.isEmpty()) {
+            welcomeTextView.setText("Bienvenido, " + username + ". Conozcamos un poco más de ti");
+        } else {
+            welcomeTextView.setText("Bienvenido! Conozcamos un poco más de ti");
+        }
 
         buttonIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,12 +64,12 @@ public class bodyActivity extends AppCompatActivity {
     }
 
     private void saveUserData() {
-        String edad = editTextEdad.getText().toString().trim();
+        String edad = spinnerEdad.getSelectedItem().toString().trim();
         String peso = editTextPeso.getText().toString().trim();
         String estatura = editTextEstatura.getText().toString().trim();
 
         // Validar los datos ingresados
-        if (TextUtils.isEmpty(edad) || TextUtils.isEmpty(peso) || TextUtils.isEmpty(estatura)) {
+        if (TextUtils.isEmpty(peso) || TextUtils.isEmpty(estatura) || edad.equals("Selecciona tu rango de edad")) {
             Toast.makeText(bodyActivity.this, "Por favor, complete todos los campos.", Toast.LENGTH_SHORT).show();
             return;
         }

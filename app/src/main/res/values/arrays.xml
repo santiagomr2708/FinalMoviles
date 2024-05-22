@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="edad_options">
+        <item>7 - 15 años</item>
+        <item>16 - 40 años</item>
+        <item>40+ años</item>
+    </string-array>
+</resources>
