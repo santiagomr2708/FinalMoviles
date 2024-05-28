@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Amarillo"
+    tools:context=".easyActivity">
+
+    <!-- Título -->
+
+    <!-- Cuadro de ejercicio -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Medio"
+        android:textAppearance="?attr/textAppearanceHeadline4"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <!-- Temporizador -->
+    <LinearLayout
+        android:id="@+id/exerciseBox"
+        android:layout_width="wrap_content"
+        android:layout_height="403dp"
+        android:layout_below="@id/title"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/exerciseImage"
+            android:layout_width="200dp"
+            android:layout_height="163dp"
+            android:contentDescription="@string/exercise_image_desc2"
+            android:src="@drawable/fase1_1" />
+
+        <TextView
+            android:id="@+id/exerciseInstructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Cómo hacerlo:"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/exerciseDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Posición inicial: Asume una posición boca abajo en el suelo con los pies juntos.\n2. Plank (posición de tabla): Levántate utilizando los brazos y las bolas de los pies.\n3. Coloca las manos un poco más allá de la altura de los hombros para trabajar brazos y pecho."
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="164dp"
+        android:layout_height="98dp"
+        android:layout_below="@id/exerciseBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp"
+        android:indeterminate="false"
+        android:indeterminateTint="@color/white"
+        android:max="120"
+        android:progress="120"
+        android:progressDrawable="@drawable/progress_bar_style"
+        android:progressTint="@color/black" />
+
+    <TextView
+        android:id="@+id/timerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="2:00"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textColor="@android:color/black" />
+
+    <!-- Botón de Iniciar/Terminar -->
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/black"
+        android:text="Iniciar"
+        android:textSize="18sp" />
+
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Amarillo"
+    tools:context=".easyActivity">
+
+    <!-- Título -->
+
+    <!-- Cuadro de ejercicio -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Difícil"
+        android:textAppearance="?attr/textAppearanceHeadline4"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <!-- Temporizador -->
+    <LinearLayout
+        android:id="@+id/exerciseBox"
+        android:layout_width="wrap_content"
+        android:layout_height="425dp"
+        android:layout_below="@id/title"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/exerciseImage"
+            android:layout_width="200dp"
+            android:layout_height="163dp"
+            android:contentDescription="@string/exercise_image_desc3"
+            android:src="@drawable/fase1_1_1" />
+
+        <TextView
+            android:id="@+id/exerciseInstructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Cómo hacerlo:"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/exerciseDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Ponte en posición: Cuclíllate entre barras o en el suelo con las manos a los lados. Asegúrate de que tus manos estén a una distancia cómoda.\n2. Manos debajo del ombligo: Coloca las manos mirando hacia adelante, paralelas al ombligo.\n3. Inclínate hacia adelante: Pesa más sobre las manos, manteniéndolas rectas.\n4. Empuja con las manos: Todo el peso debe apoyarse en las manos, manteniendo el cuerpo recto.\n5. Contrae los abdominales: Mantén el tronco firme y el cuerpo rígido."
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="164dp"
+        android:layout_height="98dp"
+        android:layout_below="@id/exerciseBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:indeterminate="false"
+        android:indeterminateTint="@color/white"
+        android:max="120"
+        android:progress="120"
+        android:progressDrawable="@drawable/progress_bar_style"
+        android:progressTint="@color/black" />
+
+    <TextView
+        android:id="@+id/timerText"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_alignTop="@id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:text="2:00"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textColor="@android:color/black" />
+
+    <!-- Botón de Iniciar/Terminar -->
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/black"
+        android:text="Iniciar"
+        android:textSize="18sp" />
+
+</RelativeLayout>

@@ -42,6 +42,26 @@
             android:name=".MainActivity"
             android:exported="true">
         </activity>
+
+        <activity
+            android:name=".profileActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".easyActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".mediumActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".hardActivity"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>

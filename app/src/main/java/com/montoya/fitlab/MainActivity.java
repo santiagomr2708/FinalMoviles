@@ -83,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button_easy).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Ir a la pantalla de facil
+                startActivity(new Intent(MainActivity.this, easyActivity.class));
                 // Iniciar el nivel fácil
                 startLevel("fácil");
             }
@@ -91,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button_medium).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Ir a la pantalla de medio
+                startActivity(new Intent(MainActivity.this, mediumActivity.class));
                 // Iniciar el nivel medio
                 startLevel("medio");
             }
@@ -99,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button_hard).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Ir a la pantalla de dificil
+                startActivity(new Intent(MainActivity.this, hardActivity.class));
                 // Iniciar el nivel difícil
                 startLevel("difícil");
             }

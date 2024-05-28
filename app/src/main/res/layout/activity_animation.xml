@@ -5,17 +5,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/black"
     tools:context=".animationActivity">
-
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        app:lottie_rawRes="@raw/pesas"
+        android:layout_height="551dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
         app:lottie_autoPlay="true"
-        app:lottie_loop="true"/>
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/pesas" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:text="FitLab"
+        android:textColor="@color/Amarillo"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 </LinearLayout>
